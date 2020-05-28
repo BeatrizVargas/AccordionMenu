@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <ul id="accordion">
+            <li>
+                <a href=# class="active"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <div class="box active">
+                    <h1>
+                        Github
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatum quibusdam,
+                        inventore, vero optio laborum aspernatur consequuntur error eos, maiores vel magni placeat odio
+                        atque fuga doloremque corporis earum eaque!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <a href=#><i class="fa fa-google" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>
+                        Google
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatum quibusdam,
+                        inventore, vero optio laborum aspernatur consequuntur error eos, maiores vel magni placeat odio
+                        atque fuga doloremque corporis earum eaque!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <a href=#><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>
+                        Linkedin
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatum quibusdam,
+                        inventore, vero optio laborum aspernatur consequuntur error eos, maiores vel magni placeat
+                        odio
+                        atque fuga doloremque corporis earum eaque!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <a href=#><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <div class="box ">
+                    <h1>
+                        Facebook
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatum quibusdam,
+                        inventore, vero optio laborum aspernatur consequuntur error eos, maiores vel magni placeat odio
+                        atque fuga doloremque corporis earum eaque!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <a href=#><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>
+                        Instagram
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatum quibusdam,
+                        inventore, vero optio laborum aspernatur consequuntur error eos, maiores vel magni placeat odio
+                        atque fuga doloremque corporis earum eaque!
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '#accordion>li>a', function () {
+            $(this).siblings('.box').addClass('active');
+            $(this).closest('li').siblings('li').find('.box').removeClass('active');
+
+        });
+        $('#accordion').on('click', 'li>a', function () {
+            $('#accordion li a.active').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+
+    <footer class="footer">
+        <h6>&#169; 2020 Beatriz Vargas</h6>
+    </footer>
+</body>
+
+</html>
